@@ -1,0 +1,15 @@
+ PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  annotations:
+    volume.beta.kubernetes.io/storage-provisioner: ibm.io/ibmc-block
+  name: yusuke-muramatsu-pvc
+  namespace: yusuke-muramatsu-pipeline-from-scratch
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+
+      
